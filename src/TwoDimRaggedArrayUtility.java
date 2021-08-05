@@ -42,7 +42,11 @@ public class TwoDimRaggedArrayUtility {
         }
         return columnTotal;
     }
-
+    /**
+     * Gets the highest in array.
+     * @param data
+     * @return highest
+     */
     public static double getHighestInArray(double[][] data) {
         double highest = data[0][0];
         for (int row = 0; row < data.length; row++) {
@@ -79,7 +83,12 @@ public class TwoDimRaggedArrayUtility {
         }
         return highest;
     }
-
+    /**
+     * Gets the highest in column index.
+     * @param data
+     * @param col
+     * @return highest
+     */
     public static int getHighestInColumnIndex(double[][] data, int col) {
         int highest = 0;
         int rowChecker = 0;
@@ -154,7 +163,11 @@ public class TwoDimRaggedArrayUtility {
         }
         return highest;
     }
-
+    /**
+     * Gets the lowest in array.
+     * @param data
+     * @return lowest
+     */
     public static double getLowestInArray(double[][] data) {
         double lowest = data[0][0];
         for (int row = 0; row < data.length; row++) {
@@ -166,7 +179,12 @@ public class TwoDimRaggedArrayUtility {
         }
         return lowest;
     }
-
+    /**
+     * Gets the lowest in column.
+     * @param data
+     * @param col
+     * @return lowest
+     */
     public static double getLowestInColumn(double[][] data, int col) {
         int rowChecker = 0;
         double lowest = data[0][0];
@@ -187,7 +205,12 @@ public class TwoDimRaggedArrayUtility {
         }
         return lowest;
     }
-
+    /**
+     * Gets the lowest in column index.
+     * @param data
+     * @param col
+     * @return lowest
+     */
     public static int getLowestInColumnIndex(double[][] data, int col) {
         int lowest = 0;
         int rowChecker = 0;
@@ -337,172 +360,3 @@ public class TwoDimRaggedArrayUtility {
     }
 }
 
-
-//
-//// TODO: Auto-generated Javadoc
-///**
-// * The Class TwoDimRaggedArrayUtility.
-// */
-//public class TwoDimRaggedArrayUtility {
-//
-//    /**
-//     * Instantiates a new two dim ragged array utility.
-//     */
-//    public TwoDimRaggedArrayUtility() {
-//
-//    }
-//
-
-//    /**
-//     * Gets the highest in column.
-//     *
-//     * @param data the data
-//     * @param col  the col
-//     * @return the highest in column
-//     */
-//    public static double getHighestInColumn(double[][] data, int col) {
-//        int rowChecker = 0;
-//        double highest = data[0][0];
-//        while (rowChecker < data.length) {
-//            if (col < data[rowChecker].length) {
-//                highest = data[rowChecker][col];
-//                break;
-//            } else {
-//                rowChecker++;
-//            }
-//        }
-//        for (int row = 0; row < data.length; row++) {
-//            if (col < data[row].length) {
-//                if (data[row][col] > highest) {
-//                    highest = data[row][col];
-//                }
-//            }
-//        }
-//        return highest;
-//    }
-//
-//    /**
-//     * Gets the highest in column index.
-//     *
-//     * @param data the data
-//     * @param col  the col
-//     * @return the highest in column index
-//     */
-//    public static int getHighestInColumnIndex(double[][] data, int col) {
-//        int highest = 0;
-//        int rowChecker = 0;
-//        double highestInColumn = data[0][0];
-//        while (rowChecker < data.length) {
-//            if (col < data[rowChecker].length) {
-//                highestInColumn = data[rowChecker][col];
-//                break;
-//            } else {
-//                rowChecker++;
-//            }
-//        }
-//        for (int row = 0; row < data.length; row++) {
-//            if (col < data[row].length) {
-//                if (data[row][col] > highestInColumn) {
-//                    highestInColumn = data[row][col];
-//                    highest = row;
-//                }
-//            }
-//
-//        }
-//        return highest;
-//    }
-//
-//    /**
-//     * Gets the lowest in column.
-//     *
-//     * @param data the data
-//     * @param col  the col
-//     * @return the lowest in column
-//     */
-//    public static double getLowestInColumn(double[][] data, int col) {
-//        int rowChecker = 0;
-//        double lowest = data[0][0];
-//        while (rowChecker < data.length) {
-//            if (col < data[rowChecker].length) {
-//                lowest = data[rowChecker][col];
-//                break;
-//            } else {
-//                rowChecker++;
-//            }
-//        }
-//        for (int row = 0; row < data.length; row++) {
-//            if (col < data[row].length) {
-//                if (data[row][col] < lowest) {
-//                    lowest = data[row][col];
-//                }
-//            }
-//        }
-//        return lowest;
-//    }
-//
-//    /**
-//     * Gets the lowest in column index.
-//     *
-//     * @param data the data
-//     * @param col  the col
-//     * @return the lowest in column index
-//     */
-//    public static int getLowestInColumnIndex(double[][] data, int col) {
-//        int lowest = 0;
-//        int rowChecker = 0;
-//        double lowestInColumn = data[0][0];
-//        while (rowChecker < data.length) {
-//            if (col < data[rowChecker].length) {
-//                lowestInColumn = data[rowChecker][col];
-//                break;
-//            } else {
-//                rowChecker++;
-//            }
-//        }
-//        for (int row = 0; row < data.length; row++) {
-//            if (col < data[row].length) {
-//                if (data[row][col] < lowestInColumn) {
-//                    lowestInColumn = data[row][col];
-//                    lowest = row;
-//                }
-//            }
-//        }
-//        return lowest;
-//    }
-//
-//    /**
-//     * Gets the highest in array.
-//     *
-//     * @param data the data
-//     * @return the highest in array
-//     */
-//    public static double getHighestInArray(double[][] data) {
-//        double highest = data[0][0];
-//        for (int row = 0; row < data.length; row++) {
-//            for (int column = 0; column < data[row].length; column++) {
-//                if (data[row][column] > highest) {
-//                    highest = data[row][column];
-//                }
-//            }
-//        }
-//        return highest;
-//    }
-//
-//    /**
-//     * Gets the lowest in array.
-//     *
-//     * @param data the data
-//     * @return the lowest in array
-//     */
-//    public static double getLowestInArray(double[][] data) {
-//        double lowest = data[0][0];
-//        for (int row = 0; row < data.length; row++) {
-//            for (int col = 0; col < data[row].length; col++) {
-//                if (data[row][col] < lowest) {
-//                    lowest = data[row][col];
-//                }
-//            }
-//        }
-//        return lowest;
-//    }
-//}
