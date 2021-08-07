@@ -64,14 +64,14 @@ public class TwoDimRaggedArrayUtility {
      * @return highest
      */
     public static double getHighestInColumn(double[][] data, int col) {
-        int rowChecker = 0;
+        int rowCheck = 0;
         double highest = data[0][0];
-        while (rowChecker < data.length) {
-            if (col < data[rowChecker].length) {
-                highest = data[rowChecker][col];
+        while (rowCheck < data.length) {
+            if (col < data[rowCheck].length) {
+                highest = data[rowCheck][col];
                 break;
             } else {
-                rowChecker++;
+                rowCheck++;
             }
         }
         for (int row = 0; row < data.length; row++) {
